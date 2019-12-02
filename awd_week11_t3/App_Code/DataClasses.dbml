@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="csavio" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  
+
+
+<Connection Mode="WebSettings" ConnectionString= "Server=csavio.db.5805060.hostedresource.com; Database=csavio; User ID=csavio; Password=Luizcarol228; Trusted_Connection=False" 
+
+
+SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ConnectionStringweek9" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.students" Member="students">
+    <Type Name="student">
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StuID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="student_studentinfo" Member="studentinfos" ThisKey="StuID" OtherKey="StuID" Type="studentinfo" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.studentinfos" Member="studentinfos">
+    <Type Name="studentinfo">
+      <Column Name="StuID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="test1" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="test2" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="test3" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="test4" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="test5" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="student_studentinfo" Member="student" ThisKey="StuID" OtherKey="StuID" Type="student" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
