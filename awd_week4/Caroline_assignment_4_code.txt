@@ -1,0 +1,330 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default2.aspx.vb" Inherits="Default2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+<title>Virtual Labs</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<form id="form1" runat="server">
+<div id="wrapper">
+	<div id="header-wrapper">
+	<div id="header">
+		<div id="page_title">
+		<table width="100%">
+		<tr><td width="90%">
+			<h1 class="style6">Virtual Physics</h1>
+			<p class="style6">A supplement to Physics class</p>
+			</td>
+		    <td>
+		    <asp:ImageButton ID="physicscourt" runat="server" ImageUrl = "images/physics-court.gif" AlternateText="Violation of the Physics law is taken from- http://www.omed.gatech.edu/redux/wp-content/uploads/2008/10/bizarro-physics-court.gif/" height="150px" PostBackUrl="mailto:csavio@ramapo.edu"/>
+		    </td>
+		</tr>
+	    </table>
+		</div>
+	</div>
+	</div>
+	
+	<div id="page">
+	<div id="page-bgtop">
+		<div id="content">
+			<div class="post">
+				<h2 class="title">Welcome to Virtual Physics</h2>
+				<hr />
+				<div>
+					<p><i>Welcome to a wonderful opportunity to do labs at home.  In class, we've done plenty of "wet labs".  Now, 					   
+					here's your chance to get creative at home and try different variables and have fun with it :-)</i></p>
+                    <p>Here are some things you will need before you begin this lab:<br />
+                        <asp:BulletedList ID="materialsneeded" runat="server" BulletStyle="Circle">
+                            <asp:ListItem>Scratch paper and a pencil for notes and calculations.</asp:ListItem>
+                            <asp:ListItem>A Scientific calculator for Trigonometric Calculations.</asp:ListItem>
+                            <asp:ListItem>Your creativity</asp:ListItem>
+                            <asp:ListItem>A good head on your shoulders</asp:ListItem>
+                        </asp:BulletedList>
+                                      
+                    Good luck!</p>
+				<hr /><br />
+				</div>
+			</div>
+			
+			<div class="post">
+				<h2 class="title">Your Task:</h2>
+				<hr>
+				<p> 
+                    
+                    Select the file you wish you upload: 
+                </p>
+                <p><asp:FileUpload ID="up_load_file" runat="server" BackColor="White" 
+                        BorderColor="#0000CC" BorderStyle="None"/></p>
+                <p> 
+                <br />
+                    <asp:Button ID="up_load" runat="server" Text="upload file" 
+                        onclick="up_load_Click" />&nbsp;
+                    <asp:Label ID="label_msg" runat="server"></asp:Label>
+                </p>
+                <p>
+                    Are you ready to begin?<br />
+                </p>
+				<hr>
+                <p>
+                    Question #1:<br />
+                    Fido's owner is pulling the leash with a force of 50-N, as shown below. The 
+                    leash makes an angle of 40 degrees with the vertical (y axis). Find the 'x' and 
+                    'y' components of the tensional force on the leash.<br />
+                    <br />
+                    <asp:Image ID="puppy" runat="server" ImageUrl = "images/fido.png" AlternateText="This picture of Fido is taken from- http://www.thedogtrainingformula.com/MPj04018550000[1].jpg"/>
+                     <br />                   
+                    <br />
+                    <asp:RadioButton ID="RadioButton1" runat="server" GroupName="physics" 
+                        Text="x=50 cos(40) = 38.3 N ; y=50 sin(40) = 32.14 N" />
+                    <br />
+                    <asp:RadioButton ID="RadioButton2" runat="server" GroupName="physics" 
+                        Text="x=50 sin(40) = 32.14 N; y=50 cos(40) = 38.3 N" />
+                    <br />
+                    <br />
+                    <asp:Button ID="Button1" runat="server" Text="Answer!" Width="110px" />
+                    <br />
+                    <br />
+                    <asp:Label ID="result" runat="server">Click the Answer button to find out if you are correct or not.</asp:Label>
+                </p>
+				<hr>
+				<p>
+                    &nbsp;</p>
+                <p>
+                    Question #2: The 5-kg mass below is moving with a constant speed of 4 m/s to the right. Use your understanding of force relationships and vector components to determine
+                    <span class="style3">the coefficient of friction</span>, "<span class="style1">m</span>". You may need to work out the entire problem to arrive at the solution for '<span 
+                        class="style4">m </span>'. <br />
+      Hint:(F<sub>net</sub> = ma; F<sub>frict</sub> = <span class="style5">m</span>F<sub>norm</sub>; F<sub>grav</sub> = mg)<br />
+                    <br />
+                    <table>
+                    <tr>
+                        <td>
+                        <asp:Image ID="vectors" runat="server" ImageUrl = "images/vectors.gif" AlternateText="Newton's 2nd Law problem"/>
+                        </td>
+                        <td>
+                        <asp:CheckBoxList ID="question2" runat="server" Width="429px" RepeatColumns="2">
+                            <asp:ListItem Value="0">38.40</asp:ListItem>
+                            <asp:ListItem Value="0">3.62</asp:ListItem>
+                            <asp:ListItem Value="0">10.60</asp:ListItem>
+                            <asp:ListItem Value="1">0.28</asp:ListItem>
+                            <asp:ListItem Value="0">9.86</asp:ListItem>
+                            <asp:ListItem Value="0">0.00</asp:ListItem>
+                        </asp:CheckBoxList>
+                        </td>
+                    </tr>
+                    </table>
+                    
+                </p>
+                <p>
+                    <asp:Button ID="Button2" runat="server" Text="Answer!" Width="110px" />
+                </p>
+                <asp:Label ID="resultchk" runat="server">Click the Answer button to find out if you are correct or not.</asp:Label>
+                <p>
+                    &nbsp;</p>
+				<hr>
+				<p>
+                    &nbsp;</p>
+                <p>
+                    Question #3: A satellite wishes to orbit the earth at a
+ height of 100 km (approximately 60 miles) above the
+ surface of the earth. Determine the speed,
+ acceleration and orbital period of the satellite.
+                <br />
+                Hint: (M<SUB>earth </SUB>= 5.98 x 10<SUP>24</SUP> 
+ kg, R<SUB>earth</SUB> = 6.37 x 10<SUP>6</SUP> 
+ m)<br />
+                    <br />
+                    <asp:Image ID="satellite" runat="server" 
+                        AlternateText="Satellite Motion" ImageUrl="images/satellite.gif" />
+                    <br />
+                    <br />
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:ListItem Selected="True" Value="0">Select one from the chocies below</asp:ListItem>
+                        <asp:ListItem Value="0">v = 7.85 x 10^3 m/s; a = 6.17 x 10^7 m/s^2; T = 5176 s or 1.44 hrs</asp:ListItem>
+                        <asp:ListItem Value="0">v = 7.85 x 10^3 m/s; a = 6.17 x 10^7 m/s^2; T = 26790976 s or 10 months</asp:ListItem>
+                        <asp:ListItem Value="1">v = 7.85 x 10^3 m/s; a = 9.53 m/s^2; T = 5176 s or 1.44 hrs</asp:ListItem>
+                        <asp:ListItem Value="0">v = 7.85 x 10^3 m/s; a = 9.53 m/s^2; T = 26790976 s or 10 months</asp:ListItem>
+                    </asp:DropDownList>
+                </p>
+                <p>
+                    <asp:Button ID="Button3" runat="server" Text="Answer!" Width="110px" />
+                </p>
+                <asp:Label ID="resultdropdown" runat="server">Click the Answer button to find out if you are correct or not.</asp:Label>
+                </p>
+				<hr /><br />	
+				    <br />
+			</div>
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		
+		<div id="sidebar">
+			   <h2>&nbsp;</h2>
+               <h2>List of virtual labs</h2>
+			   
+			   <asp:BulletedList ID="BulletedList2" runat="server" BulletStyle="UpperRoman">
+                            <asp:ListItem>Velocity and Acceleration</asp:ListItem>
+                            <asp:ListItem>Newton's Second Law</asp:ListItem>
+                            <asp:ListItem>Circular Motion</asp:ListItem>
+                            <asp:ListItem>Electricity and Magnetism</asp:ListItem>
+                            <asp:ListItem>Optics - curved mirrors</asp:ListItem>
+                            <asp:ListItem>optics - lenses and refraction of light (Snell's Law)</asp:ListItem>
+               </asp:BulletedList>
+				   			  
+		<br /><br />
+		    <asp:ImageMap ID="einstein" runat="server" ImageUrl="images/physics_logo.jpg"  
+                   HotSpotMode="PostBack">
+		        <asp:RectangleHotSpot PostBackValue="einstein" AlternateText="Einstein" Top="0" Left="0" Right="110"
+                Bottom="258" HotSpotMode="PostBack" />
+	        </asp:ImageMap>
+		       <br />
+		    <asp:Label ID="einsteinclick" runat="server">Click on Einstein!</asp:Label>
+		        <br /><br />   
+		
+		   <asp:Calendar ID="cal" runat="server" BorderColor="white" BorderStyle="Double" 
+                   style="text-align: center">
+		        <TodayDayStyle BackColor="Aquamarine" Font-Bold="true" ForeColor="Azure" />
+		        <TitleStyle BackColor="BlanchedAlmond" Font-Bold="true" ForeColor="CadetBlue" />
+		        <NextPrevStyle ForeColor="AliceBlue" />
+           </asp:Calendar>
+               <br />
+               <br />
+               <table>
+                   <tr>
+                       <td class="style2">
+                           <span style="text-decoration:underline">N</span>ame:</td>
+                       <td style="width: 100px">
+                           <asp:TextBox ID="txtName" runat="server" AccessKey="N" Width="205px"></asp:TextBox>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="style2">
+                           <span style="text-decoration:underline">E</span>mail:</td>
+                       <td style="width: 100px">
+                           <asp:TextBox ID="txtEmail" runat="server" AccessKey="E" Width="203px"></asp:TextBox>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="style2">
+                                                      Please send me a message
+                       </td>
+                       <td style="width: 400px">
+                           <asp:TextBox ID="txtQuestion" runat="server" Height="114px" Rows="4" 
+                               TextMode="MultiLine" Width="232px"></asp:TextBox>
+                       </td>
+                   </tr>
+                   <tr>
+                        <td></td>
+                        <td>
+                        <asp:Button ID="btnClear" runat="server" AccessKey="C" Text="Start Over" />&nbsp;&nbsp;
+                        <asp:Button ID="btnNext" runat="server" AccessKey="N" Text="Send message" /><br />
+                        </td>
+                   </tr>
+                                  
+        </table>
+           </div>
+           <br /><br />
+           
+<div style="clear: both;">&nbsp;</div>
+
+	</div>
+	</div>
+	</div>
+
+
+<br />
+<br />
+
+	<div id="footer">
+		<p>Website designed and maintained by: 
+		<asp:hyperlink ID="myemail" runat="server" NavigateUrl = "mailto:csavio@ramapo.edu">C. Savio</asp:hyperlink>
+        </p>
+	</div>
+
+</form>
+</body>
+</html>
+
+
+------------------------------------------------------
+'VB Code here
+
+
+Partial Class Default2
+    Inherits System.Web.UI.Page
+
+    Protected Sub up_load_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles up_load.Click
+        Dim sizeLimit As Integer = 5242880  ' 5,242,880 is 5 MB
+        If up_load_file.HasFile Then
+            If up_load_file.PostedFile.ContentLength <= sizeLimit Then
+                Dim path As String = "C:\Users\luizcarol\" & up_load_file.FileName
+                up_load_file.SaveAs(path)
+                label_msg.Text = "File uploaded to " & path
+            Else
+                label_msg.Text = "File is too large to upload."
+            End If
+        End If
+    End Sub
+
+    Protected Sub cal_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cal.SelectionChanged
+        'ddlMonth.SelectedValue = cal.SelectedDate.Month.ToString
+        'ddlDay.SelectedValue = cal.SelectedDate.Day.ToString
+        cal.Visible = True
+        'ibtn.Calendar.Visible = True
+    End Sub
+
+ 
+
+    Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click
+        If RadioButton1.Checked Then
+            result.Text = "Very good! Correct!"
+
+        ElseIf RadioButton2.Checked Then
+            result.Text = "I'm sorry, that's not the correct answer."
+
+        End If
+    End Sub
+
+    Protected Sub einstein_Click(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.ImageMapEventArgs) Handles einstein.Click
+        If e.PostBackValue = "einstein" Then
+            einsteinclick.Text = "Hope you enjoy this site!"
+            'Else
+            'einsteinclick.Text = "Click on Einstein!"
+        End If
+    End Sub
+
+    Protected Sub Button3_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Dim answer As Integer = CInt(DropDownList1.SelectedValue)
+        If answer = "1" Then
+            resultdropdown.Text = "Very good! Correct!"
+
+        Else
+            resultdropdown.Text = "I'm sorry, that's not the correct answer."
+
+        End If
+    End Sub
+
+    Protected Sub Button2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim response As Integer = CInt(question2.SelectedValue)
+        If response = "1" Then
+            resultchk.Text = "Very good! Correct!"
+
+        Else
+            resultchk.Text = "I'm sorry, that's not the correct answer."
+
+        End If
+    End Sub
+
+    Protected Sub btnClear_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        Session.Remove("All")
+        Response.Redirect("Default.aspx")
+    End Sub
+
+    Protected Sub btnNext_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnNext.Click
+        Response.Redirect("Default.aspx")
+    End Sub
+End Class
