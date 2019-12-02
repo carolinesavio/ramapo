@@ -1,0 +1,55 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="default.css" rel="stylesheet" type="text/css" />
+    <title></title>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div id="outer">
+    <div id="header">
+		    <div id="headercontent">
+			    <h1>Virtual Physics</h1>
+			    <h2>An online course and gradebook for students and teachers</h2>
+		    </div>
+	    </div>
+    <!-- <form method="post" action="">  </form> -->
+      <div id="headerpic"></div>
+	    <div id="menu">
+		<ul>
+			<li><a href="http://www.casavio.net/home/Default.aspx">Welcome</a></li>
+			<li><a href="http://www.casavio.net/awd_week3/Default.aspx">Your Feedback</a></li>
+			<li><a href="http://www.casavio.net/awd_week4/Default.aspx">Virtual Labs</a></li>
+			<li><a href="http://www.casavio.net/awd_week5/Default3.aspx">Short Survey</a></li>
+			<li><a href="http://www.casavio.net/awd_week6/Default.aspx">Login I</a></li>
+			<li><a href="http://www.casavio.net/awd_week7/Default.aspx">Login II</a></li>
+			<li><a href="http://www.casavio.net/awd_week8/Default.aspx">Display Database</a></li>
+			<li><a href="http://www.casavio.net/awd_week9/Default.aspx">Choose student</a></li>
+			<li><a href="http://www.casavio.net/awd_week10/Default2.aspx">Edit student</a></li>
+			<li><a href="http://www.casavio.net/awd_week11_t3/Default.aspx">Insert student</a></li>
+		</ul>
+	</div>
+        <div>
+            <asp:ContentPlaceHolder id="menuContentPlaceholder" runat="server">
+            
+                
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+			<div class="center">Website designed and maintained by: <a href="mailto:csavio@ramapo.edu">C. Savio</a><br />
+          All rights reserved. 
+          Page last updated on:
+          <!-- #BeginDate format:Am1 -->April 26th, 2010<!-- #EndDate --><br />
+                
+            </div>
+	        </div>
+	    </div>
+
+    </form>
+</body>
+</html>
