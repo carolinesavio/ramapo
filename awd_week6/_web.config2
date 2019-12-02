@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <system.web>
+
+<connectionStrings>
+  <add name="ConnectionString" connectionString=" Server=csavio.db.5805060.hostedresource.com;
+Database=csavio; User ID=csavio; Password=Luizcarol228; Trusted_Connection=False" providerName="System.Data.SqlClient" /> </connectionStrings>
+
+ </system.web>
+</configuration>

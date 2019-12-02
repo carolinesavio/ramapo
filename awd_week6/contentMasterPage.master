@@ -1,0 +1,13 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="contentMasterPage.master.vb" Inherits="rightsideMasterPage" %>
+
+<asp:Content ID="maincontent" ContentPlaceHolderID="menuContentPlaceholder" Runat="Server">
+    <div id="content">
+            <asp:ContentPlaceHolder id="mainContentPlaceholder" runat="server">
+            
+             </asp:ContentPlaceHolder>
+		
+		<div class="divider1"></div>
+	</div>
+
+</asp:Content>
+
